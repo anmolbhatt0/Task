@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternate to position absolute</title>
+
+    <style>
+        .item1 {
+            height: 600px;
+            width: 600px;
+            background-color: blue;
+            grid-area: overlap;
+        }
+
+        .item2 {
+            height: 100px;
+            width: 30px;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            color: aliceblue;
+            padding: 10px;
+            background-color: red;
+            grid-area: overlap;
+            margin-left: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;    /* fr = fraction : It will just fill the entire width of the column. */
+            grid-template-rows: 1fr;
+            grid-template-areas: "overlap";
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item1">item1</div>
+        <div class="item2">Premium</div>
+    </div>
+</body>
+</html>
